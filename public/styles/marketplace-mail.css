@@ -1,0 +1,179 @@
+#desc{
+    margin-top: 0px;
+}
+
+#desContainer{
+    border-radius: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+
+
+
+
+.navImage{
+    background-color: #000;
+    position: relative;
+    line-height: 0;
+}
+
+.navImage img{
+    border-radius: 0px;
+    opacity: 0.4;
+}
+
+.money{
+    color: white;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+
+}
+
+.sover{
+    color: #bbb;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 4px;
+    font-family: Montserrat, sans-serif;
+}
+
+.selling{
+    background-color: #b32020;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 15px;
+    line-height: 1;
+    text-transform: capitalize;
+    margin-top: 14px;
+    font-family: Montserrat, sans-serif;
+    
+}
+
+.image-description{
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    right: 0;
+}
+
+
+.avantage-container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+#desContainer h1{
+    margin-top: 20px;
+    color: #b32020;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+
+.avantage-item {
+    display: inline-block;
+    background-color: #b32020;
+    width: 20%;
+    margin: 2%;
+    height: 150px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+}
+
+
+.avantage-item span {
+    top: 50%;
+left: 50%;
+width: 95%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 1.3em;
+line-height: 1.15;
+text-transform: uppercase;
+font-weight: 600;
+position: absolute;
+}
+
+
+.fonct{
+    justify-content: center;
+    margin-top: 0px;
+    flex-direction: column;
+    padding-right: 10px;
+    padding-top: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1184px){
+	.avantage-item {
+        width: calc(100% / 4);
+    }
+
+    .avantage-item span {
+        font-size: 1.2em;
+        font-weight: 550;
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px){
+	.avantage-item {
+        width: calc(100% / 2.5);
+        height: 100px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+
+
+    .avantage-item span {
+        font-size: 1.0em;
+        font-weight: 550;
+    }
+
+    .image-description{
+        top: 35%;
+    }
+
+    .money{
+        font-size: 1.5rem;
+    
+    }
+    
+    .sover{
+        font-size: 1.1rem;
+    }
+    
+    .selling{
+        font-size: 0.7rem;
+        margin-top: 6px;
+        
+    }
+
+
+}

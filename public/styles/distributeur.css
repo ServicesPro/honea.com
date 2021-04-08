@@ -1,0 +1,330 @@
+
+
+main{
+	margin-top: 90px;
+}
+
+
+#wrapper_main{
+	max-width: 1184px;
+	padding-bottom: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+
+
+
+
+
+/*Les propriété du header customizer-----------------------------------*/
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+	.header {
+		height: 60px;
+		box-shadow: 0 5px 5px -4px rgba(0,0,0,0.05);
+	
+	}
+}
+
+
+
+
+
+
+
+
+/*------Les propriété du image slide----------------------------------------*/
+
+.navWrapper{
+	padding-left: 8px;
+	padding-right: 8px;
+	box-sizing: border-box;
+	width: 100%;
+
+}
+
+.navImage{
+	width: 100%;
+}
+
+
+.navImage img{
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.05);
+	border-radius: 4px;
+
+}
+
+
+
+
+
+
+/*text du bas -----------------------------------------------------------------*/
+#desc{
+	margin-bottom: 16px;
+	margin-top: 16px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+#desContainer{
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,0.05);
+	background-color: #fff;
+	padding-bottom: 50px;
+	padding-top: 8px;
+	padding-right: 16px;
+	padding-left: 16px;
+	border-radius: 4px;
+}
+
+#desContainer h1{
+	font-weight: 600;
+	display: flex;
+	padding-top: 10px;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+
+#desContainer p{
+	text-align: justify;
+	padding-top: 12px;
+	margin: 0;
+	line-height: 1.5;
+	box-sizing: border-box;
+	font-size: .85rem;
+}
+
+.fonct{
+	padding-left: 10px;
+	padding-top: 24px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.fonct span{
+	text-align: justify;
+	font-size: .85rem;
+	margin-left: 10px;
+}
+
+#desContainer h2{
+	font-weight: 500;
+	display: flex;
+	padding-top: 10px;
+	align-items: center;
+	text-transform: uppercase;
+	font-size: 1.0rem;
+}
+
+.bestText{
+	font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Les petit ecran d'ordinateur----------------------------------------------*/
+@media screen and (max-width: 1184px){
+	/*------------------Propriete du Header------------------------------------------------------*/
+	#wrapper {
+		max-width: 950px;
+	}
+
+	#mainLogo{
+		margin-left: 20px;
+	}
+
+	#mainMenu{
+		width: 35%;
+	}
+
+	.footer_wrapper {
+		max-width: 950px;
+	}
+
+	/*-----------------------------Menu du slider, des pub et du side menu--------------------------------------------------------*/
+
+
+}
+
+
+
+
+/*Les petit ecran d'ordinateur----------------------------------------------*/
+@media screen and (max-width: 768px){
+	/*main header*/
+
+
+	main{
+		margin-top: 60px;
+	}
+
+	#mainHeader {
+		height: 60px;
+	
+	}
+
+	#mainSection{
+		padding-right: 0;
+		padding-left: 0;
+
+	}
+
+	#wrapper_main{
+		padding-top: 10px;
+	
+	}
+
+	#sliderContent{
+		margin-left: 0px;
+		height: 170px;
+		padding-left: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		box-shadow: none;
+		border-radius: 0px;
+	
+	}
+
+	#slider section{
+		margin-right: 10px;
+		width: 320px;
+		justify-content: flex-end;
+		
+	}
+
+	.controls{
+		display: none;
+	}
+
+	#sideMenu{
+		display: none;
+	}
+
+
+	#wrapper_content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 0;
+		
+	}
+
+	.slide{
+		width: 100%;
+		
+	}
+	
+	#mainLogo img{
+		max-width: 90px;
+		
+	}
+
+	#mainLogo{
+		margin-left: 45px;
+		
+	}
+
+	#logo{
+		margin-left: 10px;
+	}
+	
+
+	#drawerIcon{
+		position: absolute;
+		display: block;
+		margin-left: 8px;
+		
+	}
+	
+	
+	#mainSearch{
+		display: none;
+		
+	}
+	
+	
+	#mainMenu{
+		width: 30%;
+		display: flex;
+		align-items: center;
+		height: 40px;
+		justify-content: space-around;
+	}
+	
+	#mainMenu div:nth-child(2){
+		display: none;
+
+	}
+	
+	
+	#mainMenu{
+		justify-content: flex-end;
+		margin-right: 10px;
+		
+		
+	}
+
+	#mainMenu img{
+		height: 22px;
+		width: 22px;
+	}
+	
+	.menuItem a{
+		height: 50px;
+		margin-right: 10px;
+	
+	}
+
+	#mainMenu span{
+		display: none;
+		
+	}
+
+	
+	
+}
+
+/*-----------------------------------*/
+#desc {
+    margin-top: 7px;
+}
+
+
+.downWrapper img{
+	width: 140px;
+	margin-right: 6px;
+}
+
