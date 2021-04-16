@@ -211,7 +211,7 @@
         </div>
     </section>
 </div>
-<div id="topCategorie">
+{{-- <div id="topCategorie">
     <div id="categorieContainer">
         <h2 class="collectionH2">Nos collections</h2>
         <section>
@@ -281,7 +281,7 @@
             </div>
         </section>
     </div>
-</div>
+</div> --}}
 <div class="twoImge">
     <div class="twoImageContainer">
         <div class="twoImageWrapper">
@@ -302,90 +302,22 @@
         </header>
         <div class="productContainer">
             <div class="topProductWrapper">
-                <div class="productItem item1">
-                    <a href="coupe-legumes-multifonctionnel---rappeuse-yjyCdUSt8TxkBsIX8A6B.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2FyjyCdUSt8TxkBsIX8A6B_thumb?alt=media&amp;token=5e289413-c3ec-4366-ae90-05be86b46e5a"
-                            width="185" height="185">
-                        <div class="productName">Coupe Légumes Multifonctionnel - Rappeuse</div>
+                @foreach ($men as $man)
+                    <div class="productItem item1">
+                        <a href="coupe-legumes-multifonctionnel---rappeuse-yjyCdUSt8TxkBsIX8A6B.html">
+                            <img class="lazy" src="image/placeholder_image.jpg" data-src="{{ $man->image }}"
+                                width="185" height="185">
+                            <div class="productName">{{ $man->name }}</div>
 
 
-                        <div class="productPrice">7,000 FCFA</div>
-                        <div class="promoPrice"><del>10,000 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">30 %
-                        </div>
+                            <div class="productPrice">{{ $man->price }}</div>
+                            {{-- <div class="promoPrice"><del>{{ $product->name }}</del></div> --}}
+                            {{-- <div class="promoCard" style="display: inline-flex;">30 % --}}
+                            {{-- </div> --}}
 
-                    </a>
-                </div>
-                <div class="productItem item1">
-                    <a href="thermos-isotherme-1000ml-HC72PlZWfssHTUd0qYRT.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2FHC72PlZWfssHTUd0qYRT_thumb?alt=media&amp;token=511e948b-584f-497a-a7a9-381479a8e61f"
-                            width="185" height="185">
-                        <div class="productName">Thermos Isotherme 1000ml</div>
-
-
-                        <div class="productPrice">7,500 FCFA</div>
-                        <div class="promoPrice"><del>10,000 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">25 %
-                        </div>
-
-                    </a>
-                </div>
-                <div class="productItem item1">
-                    <a href="thermos-isotherme-800ml-Cg0nbGlFUZwsrwba5eIe.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2FCg0nbGlFUZwsrwba5eIe_thumb?alt=media&amp;token=c86b564c-8634-4343-8cf2-aefbae1a297f"
-                            width="185" height="185">
-                        <div class="productName">Thermos Isotherme 800ml</div>
-
-
-                        <div class="productPrice">6,880 FCFA</div>
-                        <div class="promoPrice"><del>8,000 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">14 %
-                        </div>
-
-                    </a>
-                </div>
-                <div class="productItem item1">
-                    <a href="renz-congelateur-debout-8-tiroirs---255---12-mois-garantie-b1eTCg82ywLOx73NM0W8.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2Fb1eTCg82ywLOx73NM0W8_thumb?alt=media&amp;token=3b312d64-86cd-4a5a-9b7f-de9f563106fd"
-                            width="185" height="185">
-                        <div class="productName">RENZ Congélateur Debout 8 Tiroirs - 255 - 12 Mois Garantie</div>
-
-
-                        <div class="productPrice">210,150 FCFA</div>
-                        <div class="promoPrice"><del>233,500 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">10 %
-                        </div>
-
-                    </a>
-                </div>
-                <div class="productItem item1">
-                    <a href="refrigerateur-renz-rz-235-litres-KRhkQKHVSWYtDrJesgVS.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2FKRhkQKHVSWYtDrJesgVS_thumb?alt=media&amp;token=af1b91d0-4e32-4c46-9009-b446378b5ea5"
-                            width="185" height="185">
-                        <div class="productName">Réfrigerateur Renz RZ 235 litres</div>
-
-
-                        <div class="productPrice">193,500 FCFA</div>
-                        <div class="promoPrice"><del>215,000 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">10 %
-                        </div>
-
-                    </a>
-                </div>
-                <div class="productItem item1">
-                    <a href="refrigerateur-neon-101-litres---ne-fr-125-wNguZeok2MOcv1mTaumt.html">
-                        <img class="lazy" src="image/placeholder_image.jpg" data-src="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/Togo%2FProduitImages%2FwNguZeok2MOcv1mTaumt_thumb?alt=media&amp;token=1b566141-0cdd-43c4-815a-56cee7c15ec8"
-                            width="185" height="185">
-                        <div class="productName">Réfrigerateur NEON 101 litres - NE-FR-125</div>
-
-
-                        <div class="productPrice">100,800 FCFA</div>
-                        <div class="promoPrice"><del>112,000 FCFA</del></div>
-                        <div class="promoCard" style="display: inline-flex;">10 %
-                        </div>
-
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

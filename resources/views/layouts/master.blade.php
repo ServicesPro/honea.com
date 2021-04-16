@@ -3,7 +3,7 @@
 <html>
 
 
-<!-- Mirrored from www.achetia.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 17:39:35 GMT -->
+<!-- Mirrored from www.Honea.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 17:39:35 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,16 +13,16 @@
 	<title>{{ config('app.name', 'Laravel') }}</title>
 
 	<meta property="og:type" content="product">
-	<meta property="og:site_name" content="Achetia">
-	<meta property="og:title" content="Achetia - Faites vous livrer en un click">
-	<meta property="og:url" content="www.achetia.com">
+	<meta property="og:site_name" content="Honea">
+	<meta property="og:title" content="Honea - Faites vous livrer en un click">
+	<meta property="og:url" content="www.Honea.com">
 	<meta property="og:description"
-		content="Achetia est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
+		content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
 	<meta name="description"
-		content="Achetia est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
+		content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
 	<meta property="og:image"
 		content="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/best_market_logo.jpg?alt=media&amp;token=c0148202-04b2-439b-b113-7c9331399ec7">
-	<meta name="title" content="Achetia - Faites vous livrer en un click">
+	<meta name="title" content="Honea - Faites vous livrer en un click">
 	<link rel="icon" type="icon/png" href="favicon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
 	<link href="{{ asset('styles/reset.css') }}" rel="stylesheet" type="text/css">
@@ -67,11 +67,11 @@
 					<img src="{{ asset('image/ic_togo.jpg') }}" width="22" height="15">
 					<h3>Togo</h3>
 				</a>
-				{{-- <a href="https://www.ci.achetia.com/" class="option" id="coteDivoireM">
+				{{-- <a href="https://www.ci.Honea.com/" class="option" id="coteDivoireM">
 					<img src="image/ic_cote.png" width="22" height="15">
 					<h3>Cote d'ivoire</h3>
 				</a>
-				<a href="https://www.bj.achetia.com/" class="option" id="beninM">
+				<a href="https://www.bj.Honea.com/" class="option" id="beninM">
 					<img src="image/ic_benin.jpg" width="22" height="15">
 					<h3>Benin</h3>
 				</a> --}}
@@ -208,13 +208,13 @@
 									style="padding-left: 8px;">
 								<span style="padding-left: 6px;">Togo</span>
 							</a>
-							{{-- <a href="https://www.ci.achetia.com/" target="_blank" style="height: 50px;"
+							{{-- <a href="https://www.ci.Honea.com/" target="_blank" style="height: 50px;"
 								id="coteDivoire">
 								<img src="image/ic_cote.png" height="14" width="20" alt="icon"
 									style="padding-left: 8px;">
 								<span style="padding-left: 6px;">Cote d'ivoire</span>
 							</a>
-							<a href="https://www.bj.achetia.com/" target="_blank" style="height: 50px;" id="benin">
+							<a href="https://www.bj.Honea.com/" target="_blank" style="height: 50px;" id="benin">
 								<img src="image/ic_benin.jpg" height="14" width="20" alt="icon"
 									style="padding-left: 8px;">
 								<span style="padding-left: 6px;">Benin</span>
@@ -300,7 +300,7 @@
 							id="storeFirst" target="_blank">
 							<img src="{{ asset('icon/play_store.svg') }}">
 						</a>
-						<a href="https://apps.apple.com/us/app/achetia/id1550813129#?platform=iphone" class="store"
+						<a href="https://apps.apple.com/us/app/Honea/id1550813129#?platform=iphone" class="store"
 							target="_blank">
 							<img src="{{ asset('icon/btn-app_store.svg') }}">
 						</a>
@@ -309,10 +309,10 @@
 			</div>
 			<div class="footer2">
 				<div class="footer2Container">
-					<a id="socialMedia1" href="https://web.facebook.com/achetiatg/" target="_blank">
+					<a id="socialMedia1" href="https://web.facebook.com/Honeatg/" target="_blank">
 						<img src="{{ asset('icon/fb.svg') }}" width="24">
 					</a>
-					<a id="socialMedia2" href="https://www.instagram.com/achetiatg/" target="_blank">
+					<a id="socialMedia2" href="https://www.instagram.com/Honeatg/" target="_blank">
 						<img src="{{ asset('icon/instagram.svg') }}" width="24">
 					</a>
 					<a id="socialMedia3" href="https://api.whatsapp.com/send?phone=+22890650505" target="_blank">

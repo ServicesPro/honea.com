@@ -18,7 +18,13 @@ class HomeController extends Controller
 
         $categories = Category::whereNull('parent_id')->take(11)->get();
 
-        return view('welcome', compact('allProducts', 'bestProducts', 'dayProducts', 'categories'));
+        $houses = Product::where('name', 'Maison et bureau')->take(6)->get();
+
+        $men = Product::where('name', 'Mode Homme')->take(6)->get();
+
+        $women = Product::where('name', 'Mode Femme')->take(6)->get();
+
+        return view('welcome', compact('allProducts', 'bestProducts', 'dayProducts', 'categories', 'men', 'women'));
     }
 
     public function contact()
