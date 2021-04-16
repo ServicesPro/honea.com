@@ -18,6 +18,8 @@ class ProductController extends Controller
         $categoryId = request('category_id');
         $categoryName = null;
 
+        $categories = Category::take(11)->get();
+
         if($categoryId) {
             $category = Category::find($categoryId);
             $categoryName = ucfirst($category->name);
@@ -27,7 +29,9 @@ class ProductController extends Controller
             $products = Product::take(30)->get();
         }
 
-        return view('product.index', compact('products', 'categoryName'));
+        $allProducts = Product::all();
+
+        return view('product.index', compact('products', 'allProducts', 'categoryName', 'categories'));
     }
 
     public function search(Request $request)

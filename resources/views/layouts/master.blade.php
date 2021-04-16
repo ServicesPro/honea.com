@@ -27,7 +27,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
 	<link href="{{ asset('styles/reset.css') }}" rel="stylesheet" type="text/css">
 	<link href="{{ asset('styles/common.css') }}" rel="stylesheet" type="text/css">
-	<link href="{{ asset('styles/popup.css') }}" rel="stylesheet" type="text/css">
+	{{-- <link href="{{ asset('styles/popup.css') }}" rel="stylesheet" type="text/css"> --}}
 	{{-- <link href="styles/login.css" rel="stylesheet" type="text/css"> --}}
     @yield('css')
 </head>
