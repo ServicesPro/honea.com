@@ -67,7 +67,7 @@
             <div class="cont2">
                 <a href="index.html" class="option" id="togoM">
                     <img src="{{ asset('image/ic_togo.jpg') }}" width="22" height="15">
-                    <h3>Togo</h3>
+                    {{-- <h3>Togo</h3> --}}
                 </a>
             </div>
         </div>
@@ -118,18 +118,18 @@
     <header style="margin-bottom: 20px" class="header">
         {{-- bande d'annonce --}}
         <div
-            style="width:100%;display:flex;flex-wrap:wrap; align-items:center; background-color: black; padding-top: .8rem; padding-bottom: .8rem; z-index: 1000; position: absolute;">
+            style="width:100%;display:flex;flex-wrap:wrap; align-items:center; background-color: black; padding-top: .6rem; padding-bottom: .6rem; z-index: 1000; position: absolute;">
             <div class="" style="display: inline-flex; flex-grow:1; width:auto;">
                 <a href="#" style="color: #c9aa3d;" class="" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" class="" width="16" height="16">
+                    {{-- <svg viewBox="0 0 24 24" class="" width="16" height="16">
                         <use xlink:href="https://www.jumia.ci/assets_he/images/i-icons.e6412588.svg#cat-services"></use>
-                    </svg>
+                    </svg> --}}
                     Vendez sur Honea
                 </a>
                 <a href="tel:+9022554" style="color: #f5da75;">
-                    <svg viewBox="0 0 24 24" class="" width="16" height="16">
+                    {{-- <svg viewBox="0 0 24 24" class="" width="16" height="16">
                         <use xlink:href="https://www.jumia.ci/assets_he/images/i-icons.e6412588.svg#cat-services"></use>
-                    </svg>
+                    </svg> --}}
                     Appelez-Nous Maintenant
                 </a>
             </div>
@@ -212,7 +212,7 @@
                             <a href="#index.html" target="_blank" style="height: 50px;" id="togo">
                                 <img src="{{ asset('image/ic_togo.jpg') }}" height="14" width="20" alt="icon"
                                     style="padding-left: 8px;">
-                                <span style="padding-left: 6px;">Togo</span>
+                                {{-- <span style="padding-left: 6px;">Togo</span> --}}
                             </a>
                         </div>
                     </div>
