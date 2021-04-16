@@ -127,7 +127,7 @@
 <div id="homeMenu">
     <div class="menuIcon">
         <a id="distributeur" href="{{ route('distributeur') }}">
-            <img src="image/icon1.png" width="40" height="40">
+            <img src="icon/distrib.svg" width="40" height="40">
             <span>Distributeurs</span>
         </a>
     </div>
@@ -138,7 +138,7 @@
         </a>
     </div>
     <div class="menuIcon">
-        <a href="#">
+        <a href="{{ route('products.index') }}">
             <img src="image/icon3.png" width="40" height="40">
             <span>Produits</span>
         </a>
