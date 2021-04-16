@@ -115,26 +115,8 @@
             </div>
         </div>
     </div>
-    <header style="margin-bottom: 20px" class="header">
-        {{-- bande d'annonce --}}
-        <div
-            style="width:100%;display:flex;flex-wrap:wrap; align-items:center; background-color: black; padding-top: .6rem; padding-bottom: .6rem; z-index: 1000; position: absolute;">
-            <div class="" style="display: inline-flex; flex-grow:1; width:auto;">
-                <a href="#" style="color: #c9aa3d;" class="" target="_blank" rel="noopener">
-                    {{-- <svg viewBox="0 0 24 24" class="" width="16" height="16">
-                        <use xlink:href="https://www.jumia.ci/assets_he/images/i-icons.e6412588.svg#cat-services"></use>
-                    </svg> --}}
-                    Vendez sur Honea
-                </a>
-                <a href="tel:+9022554" style="color: #f5da75;">
-                    {{-- <svg viewBox="0 0 24 24" class="" width="16" height="16">
-                        <use xlink:href="https://www.jumia.ci/assets_he/images/i-icons.e6412588.svg#cat-services"></use>
-                    </svg> --}}
-                    Appelez-Nous Maintenant
-                </a>
-            </div>
-        </div>
-        <div style="margin-top: 25px" class="h-wrap">
+    <header class="header">
+        <div class="h-wrap">
             <div class="h_content">
                 <div id="drawer-icon">
                     <div>
