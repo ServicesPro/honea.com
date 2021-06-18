@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
     <div id="mainContainer">
         <div id="sideMenu">
             <script>
@@ -53,4 +53,4 @@
             <h1>Le panier est vide</h1>
         </div>
     </div>
-</div>
+</div> --}}

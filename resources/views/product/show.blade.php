@@ -191,7 +191,17 @@
                 </div>
                 <div class="buttonBy">
                     <div id="btnConnection" class="btnChoise btn_buy">ACHETER MAINTENANT</div>
-                    <a href="{{ route('cart.add', $product->id) }}" id="btnGmail" class="btnChoise btn_add"><img src="{{ asset('icon/add_shopping_cart.svg') }}"></a>
+
+                    {{-- <a href="{{ route('cart.add', $product->id) }}" id="btnGmail" class="btnChoise btn_add"><img src="{{ asset('icon/add_shopping_cart.svg') }}"></a> --}}
+                    <form action="{{ route('cart.store', ['id'=>1]) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $product->id }}">
+                        <input type="hidden" name="name" value="{{ $product->name }}">
+                        <input type="hidden" name="price" value="{{ $product->price }}">
+                        <button type="submit" id="btnGmail" class="btnChoise btn_add">
+                            <img src="{{ asset('icon/add_shopping_cart.svg') }}">
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="ficheSection">
@@ -199,47 +209,12 @@
                     <h1>Détails</h1>
                 </header>
                 <div>
-                    {{ $product->description }}
+                    {!! $product->description !!}
                 </div>
                 <div>
                     <p>{{$product->shop->owner->name ?? 'n/a'}}</p>
                 </div>
             </div>
-            {{-- <div class="ficheTeknic">
-                <header>
-                    <h1>Fiche technique</h1>
-                </header>
-                <div class="fiche">
-                    <article class="tekSection">
-                        <div class="tekContainer">
-                            <h2>PRINCIPALES CARACTERISTIQUES</h2>
-                            <div>
-                                <ul class="caract" data-value="Économie d’énergie,Grand panier pour stocker plus de fruits et légumes,Écologique,Gaz R600,Technologie japonaise,Refroidissement plus rapide,Garantie de 2 ans,compresseur puissant,verrouiller la sécurité">
-                                    <li>N/A</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-                    <article  class="tekSection">
-                        <div class="tekContainer">
-                            <h2>INFORMATION GENERALE</h2>
-                            <ul class="caract2" data-value="">
-                                <li>N/A</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div> --}}
-            {{-- <div class="productSection" id="aviSection">
-                <section>
-                    <header>
-                        <h2>Avis des utilisateurs</h2>
-                    </header>
-                    <div class="productContainer" id="aviContent">
-
-                    </div>
-                </section>
-            </div> --}}
         </div>
         <div class="secondSection">
             <section>
@@ -277,31 +252,31 @@
                 </article>
             </section>
             <div id="sellerSection" style="padding-bottom: 13px;">
-            <div class="seller">
-                <section>
-                    <h2>Nous contactez</h2>
-                    <div class="sel1">
-                        <p id="numero">Appelez nous pour passer votre commande au numéro</p>
-                        <p>Ou envoyer nous un email</p>
-                        <div class="sel2">
-                            contact@honea.com
+                <div class="seller">
+                    <section>
+                        <h2>Nous contactez</h2>
+                        <div class="sel1">
+                            <p id="numero">Appelez nous pour passer votre commande au numéro</p>
+                            <p>Ou envoyer nous un email</p>
+                            <div class="sel2">
+                                contact@honea.com
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="seller">
-                <section>
-                    <h2>Partager le produit</h2>
-                    <div class="shareIcon">
-                        <a class="fbShare">
-                            <img src="{{ asset('icon/facebook.png') }}" width="36px" height="36px" style="margin-bottom: 2px;">
-                        </a>
-                        <a class="twShare">
-                            <img src="{{ asset('icon/twitter.png') }}" width="40px" height="40px">
-                        </a>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                </div>
+                <div class="seller">
+                    <section>
+                        <h2>Partager le produit</h2>
+                        <div class="shareIcon">
+                            <a class="fbShare">
+                                <img src="{{ asset('icon/facebook.png') }}" width="36px" height="36px" style="margin-bottom: 2px;">
+                            </a>
+                            <a class="twShare">
+                                <img src="{{ asset('icon/twitter.png') }}" width="40px" height="40px">
+                            </a>
+                        </div>
+                    </section>
+                </div>
             </div>
 
         </div>

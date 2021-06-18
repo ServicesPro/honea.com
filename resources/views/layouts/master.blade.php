@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-
-<!-- Mirrored from www.Honea.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 17:39:35 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,8 +17,6 @@
         content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
     <meta name="description"
         content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
-    <meta property="og:image"
-        content="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/best_market_logo.jpg?alt=media&amp;token=c0148202-04b2-439b-b113-7c9331399ec7">
     <meta name="title" content="Honea - Faites vous livrer en un click">
     <link rel="icon" type="icon/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&amp;display=swap"
@@ -166,17 +160,6 @@
                                 </span>
                             </a>
                         @endauth
-
-                        <div class="notification-new">
-                            {{-- <h5>1</h5> --}}
-                        </div>
-                        <script>
-                            var notification = localStorage.getItem("notification");
-                            if (notification != undefined && notification == "oui") {
-                                document.querySelector(".notification-new").style.display = "flex";
-                            }
-
-                        </script>
                     </div>
                     <div class="menuItemM" id="paysButtonM">
                         <a>
@@ -198,17 +181,22 @@
                             </a>
                         </div>
                     </div>
-                    <div id="menuCart">
+                    <div class="menuItem" id="menuCart">
                         <a href="{{ route('cart.index') }}">
                             <img src="{{ asset('icon/ic_cart.svg') }}" height="21" width="21" alt="icon">
-                            <span>Panier</span>
-                            <h3 class="count">
+                            <span>Panier </span>
+                            @if (Cart::instance('default')->count() > 0)
+                                <span style="font-size: 20px; font-weight: 700; color: orange">
+                                    {{ Cart::instance('default')->count() }}
+                                </span>
+                            @endif
+                            {{-- <h3 class="count">
                                 @auth
-                                    {{ Cart::session(auth()->id())->getContent()->count() }}
+                                    {{ Cart::instance('auth')->count() }}
                                 @else
-                                    0
+                                    {{ Cart::instance('default')->count() }}
                                 @endauth
-                            </h3>
+                            </h3> --}}
                         </a>
                     </div>
                 </div>
@@ -293,19 +281,13 @@
             </div>
         </div>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-firestore.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"
-        integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
     <script type="application/javascript" src="{{ asset('js/userCountry.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/testSlide.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/database.js') }}"></script>
     {{-- <script type="text/javascript" src="{{ asset('') }}js/login.js"></script> --}}
     <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
     @yield('js')

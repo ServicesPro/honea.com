@@ -66,15 +66,21 @@
             <div id="connection_wrapper">
                 <div class="form" id="formName">
                     <label for="formNom">Adresse mail</label>
-                    <input id="formNom" required type="email" name="email" :value="old('email')" required autofocus autocomplete=>
+                    <input id="formNom" required type="email" name="email" value="{{ old('email') }}" required autofocus autocomplete=>
                 </div>
                 <div class="form" id="formNumberContainer">
+                    <div style="margin-bottom: .25rem; display: flex;" class="">
+                        <div style="width: 70%"></div>
+                        <a style="justify-content: cener; align-items: end;" href="{{ route('password.request') }}">Mot de passe oubllié ?</a>
+                    </div>
                     <label for="formNumber">Mot de passe</label>
                     <div class="inputContainer">
                         <input id="formNumber" required type="password" name="password" required autocomplete="current-password">
                     </div>
-
                 </div>
+            </div>
+            <div style="margin-top: 3.5rem; text-align: center; color: orangered; border-style: none; padding-left: 16px; padding-right: 16px; font-size: .75rem; line-height: 1.2; padding-top: 8px; padding-bottom: 8px; border: 1px solid orangered; border-radius: 4px; text-transform: uppercase;">
+                <a href="{{ route('register') }}">Vous n'avez pas de compte? Inscrivez-vous</a>
             </div>
             {{-- <div id="recaptcha-container" style="margin-top: 30px;"></div>
             <div id="btnCode" class="btnlogin">VERIFIER LE CODE</div> --}}

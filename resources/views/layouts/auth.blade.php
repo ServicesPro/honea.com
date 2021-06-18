@@ -2,24 +2,19 @@
 <!DOCTYPE html>
 <html>
 
-
-<!-- Mirrored from www.achetia.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 Apr 2021 17:39:35 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<title>Achetia - Faites vous livrer en un click</title>
+	<title>Honea - Faites vous livrer en un click</title>
 	<meta property="og:type" content="product">
-	<meta property="og:site_name" content="Achetia">
-	<meta property="og:title" content="Achetia - Faites vous livrer en un click">
-	<meta property="og:url" content="www.achetia.com">
+	<meta property="og:site_name" content="Honea">
+	<meta property="og:title" content="Honea - Faites vous livrer en un click">
+	<meta property="og:url" content="www.Honea.com">
 	<meta property="og:description"
-		content="Achetia est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
+		content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
 	<meta name="description"
-		content="Achetia est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
-	<meta property="og:image"
-		content="https://firebasestorage.googleapis.com/v0/b/bestdistribution-169c9.appspot.com/o/best_market_logo.jpg?alt=media&amp;token=c0148202-04b2-439b-b113-7c9331399ec7">
-	<meta name="title" content="Achetia - Faites vous livrer en un click">
+		content="Honea est la première destination d’achat en ligne. Nous sommes fiers d’avoir tout ce dont vous pourriez avoir besoin pour vivre au meilleur prix que partout ailleurs.">
+	<meta name="title" content="Honea - Faites vous livrer en un click">
 	<link rel="icon" type="icon/png" href="favicon.png">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&amp;display=swap" rel="stylesheet">
 	<link href="styles/reset.css" rel="stylesheet" type="text/css">
@@ -39,106 +34,100 @@
 		</div>
 	</div>
 	<header class="header">
-		<div class="h-wrap">
-			<div class="h_content">
-				<div id="drawer-icon">
-					<div>
-						<img src="image/toggle.png" width="24px" alt="logoDistribution" />
-					</div>
-				</div>
-				<div id="logo">
-					<div>
-						<a href="{{ url('/') }}"><img src="image/honea.png" width="140px" alt="logoDistribution" /></a>
-					</div>
-				</div>
-				<div id="search">
-					<div id="search-content">
-						<div id="search-form">
-							<div id="ic-search">
-								<img src="icon/search_filled.svg" height="20" width="20" alt="image">
-							</div>
-							<input id="search-input" type="text" name="qsearch"
-								placeholder="Rechercher un produit ou une catégorie..." autocomplete="false"
-								onkeypress="advanceSearch(this.value)">
-							<img id="ic_detete" src="icon/ic_detele.svg" height="20" width="20" alt="image"
-								style="visibility: hidden">
-							<div class="sug"></div>
-						</div>
-						<div id="btn-search">Recherche</div>
-					</div>
-					<div style="display: none;" class="search-drag">
-					</div>
-				</div>
-				<div id="mainMenu">
-					<div class="menuItem">
+        <div class="h-wrap">
+            <div class="h_content">
+                <div id="drawer-icon">
+                    <div>
+                        <img src="{{ asset('image/toggle.png') }}" width="24px" alt="logoDistribution" />
+                    </div>
+                </div>
+                <div id="logo">
+                    <div>
+                        <a href="{{ url('/') }}"><img src="{{ asset('image/honea.png') }}" width="140px"
+                                alt="logoDistribution" /></a>
+                    </div>
+                </div>
+                <div id="search">
+                    <div id="search-content">
+                        <div id="search-form">
+                            <div id="ic-search">
+                                <img src="{{ asset('icon/search_filled.svg') }}" height="20" width="20" alt="image">
+                            </div>
+                            <input id="search-input" type="text" name="qsearch"
+                                placeholder="Rechercher un produit ou une catégorie..." autocomplete="false"
+                                onkeypress="advanceSearch(this.value)">
+                            <img id="ic_detete" src="{{ asset('icon/ic_detele.svg') }}" height="20" width="20"
+                                alt="image" style="visibility: hidden">
+                            <div class="sug"></div>
+                        </div>
+                        <div id="btn-search">Recherche</div>
+                    </div>
+                    <div style="display: none;" class="search-drag">
+                    </div>
+                </div>
+                <div id="mainMenu">
+                    <div class="menuItem">
                         @auth
                             <a href="{{ route('login') }}" class="btn_connect">
-                                <img src="icon/icon_user.svg" height="20" width="20" alt="">
-                                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px;">
+                                <img src="{{ asset('icon/icon_user.svg') }}" height="20" width="20" alt="">
+                                <span
+                                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px;">
                                     {{ Auth::user()->name }}
                                 </span>
                             </a>
                         @else
                             <a href="{{ route('login') }}" class="btn_connect">
-                                <img src="icon/icon_user.svg" height="20" width="20" alt="">
-                                <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px;">
+                                <img src="{{ asset('icon/icon_user.svg') }}" height="20" width="20" alt="">
+                                <span
+                                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px;">
                                     Connexion
                                 </span>
                             </a>
                         @endauth
+                    </div>
+                    <div class="menuItemM" id="paysButtonM">
+                        <a>
+                            <img height="16" width="22" alt="" style="padding-left: 4px; padding-right: 16px;">
+                        </a>
+                    </div>
+                    <div class="menuItem" id="paysButton">
+                        <a>
+                            <img id="paysIcone">
+                            <span>Pays</span>
+                            <img src="{{ asset('icon/expand_arrow.svg') }}" height="14" width="20" alt="icon"
+                                style="margin-left: 2px; margin-top: 2px;">
+                        </a>
+                        <div class="paysDrop">
+                            <a href="#index.html" target="_blank" style="height: 50px;" id="togo">
+                                <img src="{{ asset('image/ic_togo.jpg') }}" height="14" width="20" alt="icon"
+                                    style="padding-left: 8px;">
+                                {{-- <span style="padding-left: 6px;">Togo</span> --}}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="menuItem" id="menuCart">
+                        <a href="{{ route('cart.index') }}">
+                            <img src="{{ asset('icon/ic_cart.svg') }}" height="21" width="21" alt="icon">
+                            <span>Panier </span>
+                            @if (Cart::instance('default')->count() > 0)
+                                <span style="font-size: 20px; font-weight: 700; color: orange">
+                                    {{ Cart::instance('default')->count() }}
+                                </span>
+                            @endif
+                            {{-- <h3 class="count">
+                                @auth
+                                    {{ Cart::instance('auth')->count() }}
+                                @else
+                                    {{ Cart::instance('default')->count() }}
+                                @endauth
+                            </h3> --}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-						<div class="notification-new">
-							<h5>1</h5>
-						</div>
-						<script>
-							var notification = localStorage.getItem("notification");
-							if (notification != undefined && notification == "oui") {
-								document.querySelector(".notification-new").style.display = "flex";
-							}
-						</script>
-					</div>
-					<div class="menuItemM" id="paysButtonM">
-						<a>
-							<img height="16" width="22" alt="" style="padding-left: 4px; padding-right: 16px;">
-						</a>
-					</div>
-					<div class="menuItem" id="paysButton">
-						<a>
-							<img id="paysIcone">
-							<span>Pays</span>
-							<img src="icon/expand_arrow.svg" height="14" width="20" alt="icon"
-								style="margin-left: 2px; margin-top: 2px;">
-						</a>
-						<div class="paysDrop">
-							<a href="#index.html" target="_blank" style="height: 50px;" id="togo">
-								<img src="image/ic_togo.jpg" height="14" width="20" alt="icon"
-									style="padding-left: 8px;">
-								<span style="padding-left: 6px;">Togo</span>
-							</a>
-							{{-- <a href="https://www.ci.achetia.com/" target="_blank" style="height: 50px;"
-								id="coteDivoire">
-								<img src="image/ic_cote.png" height="14" width="20" alt="icon"
-									style="padding-left: 8px;">
-								<span style="padding-left: 6px;">Cote d'ivoire</span>
-							</a>
-							<a href="https://www.bj.achetia.com/" target="_blank" style="height: 50px;" id="benin">
-								<img src="image/ic_benin.jpg" height="14" width="20" alt="icon"
-									style="padding-left: 8px;">
-								<span style="padding-left: 6px;">Benin</span>
-							</a> --}}
-						</div>
-					</div>
-					<div id="menuCart">
-						<a href="#panier.html">
-							<img src="icon/ic_cart.svg" height="21" width="21" alt="icon">
-							<span>Panier</span>
-							<h3 class="count">0</h3>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
 	<main>
 		<div id="wrapper_main">
 			@yield('content')
@@ -184,7 +173,7 @@
 							id="storeFirst" target="_blank">
 							<img src="icon/play_store.svg">
 						</a>
-						<a href="https://apps.apple.com/us/app/achetia/id1550813129#?platform=iphone" class="store"
+						<a href="https://apps.apple.com/us/app/Honea/id1550813129#?platform=iphone" class="store"
 							target="_blank">
 							<img src="icon/btn-app_store.svg">
 						</a>
@@ -193,10 +182,10 @@
 			</div>
 			<div class="footer2">
 				<div class="footer2Container">
-					<a id="socialMedia1" href="https://web.facebook.com/achetiatg/" target="_blank">
+					<a id="socialMedia1" href="https://web.facebook.com/Honeatg/" target="_blank">
 						<img src="icon/fb.svg" width="24">
 					</a>
-					<a id="socialMedia2" href="https://www.instagram.com/achetiatg/" target="_blank">
+					<a id="socialMedia2" href="https://www.instagram.com/Honeatg/" target="_blank">
 						<img src="icon/instagram.svg" width="24">
 					</a>
 					<a id="socialMedia3" href="https://api.whatsapp.com/send?phone=+22890650505" target="_blank">

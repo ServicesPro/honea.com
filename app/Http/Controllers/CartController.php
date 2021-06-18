@@ -2,56 +2,68 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Coupon;
-use App\Models\Product;
 use Illuminate\Http\Request;
-use Darryldecode\Cart\CartCondition;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Validator;
 
 class CartController extends Controller
 {
-    public function add(Product $product)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        // add the product to cart
-        \Cart::session(auth()->id())->add([
-            'id' => $product->id,
-            'name' => $product->name,
-            'description'=> $product->description,
-            'price' => $product->price,
-            'quantity' => 1,
-            'attributes' => [],
-            'associatedModel' => $product
-        ]);
+        // dump(Cart::count());
+        return view('cart.index');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $dupilcates = Cart::search(function ($cartItem, $rowId) use ($request) {
+            return $cartItem->id === $request->id;
+        });
+
+        if ($dupilcates->isNotEmpty()) {
+            return redirect()->route('cart.index');
+        }
+
+        Cart::add($request->id, $request->name, 1, $request->price)->associate('App\Models\Product');
 
         return redirect()->route('cart.index');
     }
 
-    public function index()
+    // public function empty()
+    // {
+    //     Cart::destroy();
+    // }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
     {
-        $cartItems = \Cart::session(auth()->id())->getContent();
-        $cartItems = $cartItems->toArray();
-
-        // dd($cartItems[1]['name']);
-
-        return view('cart.index', compact('cartItems'));
-    }
-
-    public function destroy($itemId)
-    {
-        \Cart::session(auth()->id())->remove($itemId);
-
-        return back();
-    }
-
-    public function update($rowId)
-    {
-        \Cart::session(auth()->id())->update($rowId, [
-            'quantity' => [
-                'relative' => false,
-                'value' => request('quantity')
-            ]
-        ]);
-
-        return back();
+        //
     }
 
     public function checkout()
@@ -59,29 +71,49 @@ class CartController extends Controller
         return view('cart.checkout');
     }
 
-    public function applyCoupon()
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
     {
-        $couponCode = request('coupon_code');
+        //
+    }
 
-        $couponData = Coupon::where('code', $couponCode)->first();
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $validator= Validator::make($request->all(), [
+            'quantity' => 'required|numeric'
+        ]);
 
-        if(!$couponData) {
-            return back()->withMessage('Sorry! Coupon does not exist');
+        if ($validator->fails()) {
+            return response()->json(['success' => false], 400);
         }
 
+        Cart::update($id, $request->quantity);
 
-        //coupon logic
-        $condition = new CartCondition(array(
-            'name' => $couponData->name,
-            'type' => $couponData->type,
-            'target' => 'total',
-            'value' => $couponData->value,
-        ));
+        return response()->json(['success' => true]);
+    }
 
-        \Cart::session(auth()->id())->condition($condition); // for a speicifc user's cart
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        Cart::remove($id);
 
-
-        return back()->withMessage('coupon applied');
-
+        return back();
     }
 }

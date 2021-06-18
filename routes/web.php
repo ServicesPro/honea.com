@@ -37,11 +37,12 @@ Route::get('/distributeur', [HomeController::class, 'distributeur'])->name('dist
 Route::get('/products/search', [ProductController::class, 'search'])->name('products.search');
 Route::resource('products', ProductController::class);
 
-Route::get('/add-to-cart/{product}', [CartController::class, 'add'])->name('cart.add')->middleware('auth');
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index')->middleware('auth');
-Route::get('/cart/destroy/{itemId}', [CartController::class, 'destroy'])->name('cart.destroy')->middleware('auth');
-Route::get('/cart/update/{itemId}', [CartController::class, 'update'])->name('cart.update')->middleware('auth');
-Route::get('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout')->middleware('auth');
+// Route::get('/add-to-cart/{product}', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
+Route::delete('/cart/{product}', [CartController::class, 'destroy'])->name('cart.destroy');
+Route::patch('/cart/{product}', [CartController::class, 'update'])->name('cart.update');
+Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
 Route::get('/cart/apply-coupon', [CartController::class, 'coupon'])->name('cart.coupon')->middleware('auth');
 
 Route::resource('orders', OrderController::class)->middleware('auth');
