@@ -43,8 +43,10 @@
                                 <h1>{{ $item->model->name }} </h1>
                                 <div style="display: inline-flex">
                                     <h3 style="font-size: 23.5px; font-weight: bold; color: orangered">{{ $item->subtotal }} F CFA</h3> ||
-                                    <span>Quantité: </span>
-                                    <input data-id="{{ $item->rowId }}" class="quantity" style="width: 3rem;" type="number" name="" id="" value="{{ $item->qty }}">
+                                    <div style="display: inline-flex">
+                                        <span style="font-size: 23.5px; font-weight: bold;"">Quantité: </span>
+                                        <input data-id="{{ $item->rowId }}" class="quantity" style="width: 3rem; margin-left: 1rem" type="number" name="" id="" value="{{ $item->qty }}">
+                                    </div>
                                 </div>
                                 <div style="display: block; margin-top: 1rem;">
                                     <span style="margin-top: 1rem; margin-bottom: .8rem; font-size: 18px">Détails :</span>
