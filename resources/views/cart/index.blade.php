@@ -105,10 +105,10 @@
 
             Array.from(className).forEach (function (element) {
                 const id = element.getAttribute('data-id')
-                    alert(id)
+                    // alert(id)
                 element.addEventListener('change', function () {
                     const id = element.getAttribute('data-id')
-                    alert(this.value)
+                    // alert(this.value)
                     axios.patch(`/cart/${id}`, {
                         quantity: this.value,
                     })
