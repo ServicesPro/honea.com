@@ -190,7 +190,15 @@
                     </div>
                 </div>
                 <div class="buttonBy">
-                    <div id="btnConnection" class="btnChoise btn_buy">ACHETER MAINTENANT</div>
+                    <form action="{{ route('cart.buyNow', ['id'=>1]) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{ $product->id }}">
+                        <input type="hidden" name="name" value="{{ $product->name }}">
+                        <input type="hidden" name="price" value="{{ $product->price }}">
+                        <button type="submit" id="btnConnection" class="btnChoise btn_buy">
+                            ACHETER MAINTENANT
+                        </button>
+                    </form>
 
                     {{-- <a href="{{ route('cart.add', $product->id) }}" id="btnGmail" class="btnChoise btn_add"><img src="{{ asset('icon/add_shopping_cart.svg') }}"></a> --}}
                     <form action="{{ route('cart.store', ['id'=>1]) }}" method="POST">

@@ -3,6 +3,7 @@
 @section('css')
     <link href="{{ asset('styles/panier.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('styles/checkout.css') }}" rel="stylesheet" type="text/css">
+	<link href="styles/login2.css" rel="stylesheet" type="text/css">
 @endsection
 
 @section('content-second')
@@ -22,7 +23,56 @@
     </div>
 
     <div class="wrapperMain">
-        <div class="firstSection"></div>
+        <div class="firstSection">
+            <div id="login" class="colon">
+                <form method="POST" action="{{ route('cart.proceed') }}" id="connectionForm">
+                    @csrf
+
+                    <h1>Adresse de livraison</h1>
+                    <div id="connection_wrapper">
+                        <div class="form" id="formName">
+                            <label for="formNom">Nom complet</label>
+                            <input id="formNom" required type="text" name="shipping_fullname" value="{{ old('shipping_fullname') }}" required autofocus autocomplete>
+                        </div>
+                        <div class="form" id="formNumberContainer">
+                            <label for="shipping_address">Adresse de livraison</label>
+                            <div class="inputContainer">
+                                <input id="shipping_address" required type="text" name="shipping_address" required autocomplete>
+                            </div>
+                        </div>
+                        <div class="form" id="shipping_city">
+                            <label for="shipping_city">Ville de livraison</label>
+                            <input id="shipping_city" required type="text" name="shipping_city" value="{{ old('shipping_city') }}" required autofocus autocomplete>
+                        </div>
+                        <div class="form" id="shipping_state">
+                            <label for="shipping_state">Pays de livraison</label>
+                            <div class="inputContainer">
+                                <input id="shipping_state" required type="text" value="Togo" name="shipping_state" required autocomplete>
+                            </div>
+                        </div>
+                        <div class="form" id="shipping_zipcode">
+                            <label for="shipping_zipcode">Code postal</label>
+                            <div class="inputContainer">
+                                <input id="shipping_zipcode" required type="text" name="shipping_zipcode" required autocomplete>
+                            </div>
+                        </div>
+                        <div class="form" id="shipping_phone">
+                            <label for="shipping_phone">Numéro de téléphone</label>
+                            <div class="inputContainer">
+                                <input id="shipping_phone" required type="tel" name="shipping_phone" required autocomplete>
+                                <input required type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                <input required type="hidden" name="grand_total" value="{{ Cart::instance('default')->total() }}">
+                                <input required type="hidden" name="item_count" value="{{ Cart::instance('default')->count() }}">
+                                <input required type="hidden" name="status" value="prending">
+                                <input required type="hidden" name="is_paid" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="btnConnection" class="btnlogin"><span class="icone1"></span>ENVOYER LA COMMANDE</button>
+                </form>
+            </div>
+        </div>
         <div class="secondSection">
             <div style="width: 100%">
                 <div class="cartFooter">
@@ -85,9 +135,9 @@
                                     <div style="margin-left: 5rem; font-size: 23.5px; font-weight: bold; color: orangered"> {{ Cart::total() }}</div>
                                 </div>
 
-                                <div class="wrapperCart">
+                                {{-- <div class="wrapperCart">
                                     <a href="{{ route('cart.checkout') }}" id="send">Envoyer la commande</a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
